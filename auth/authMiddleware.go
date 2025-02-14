@@ -6,6 +6,9 @@ import (
 
         "go-micro.dev/v4/metadata"
         "go-micro.dev/v4/server"
+
+
+        
 )
 
 func AuthMiddleware() server.HandlerWrapper {
@@ -17,7 +20,6 @@ func AuthMiddleware() server.HandlerWrapper {
                                 return errors.New("no auth meta-data found in request")
                         }
 
-                        // Check if the token is present and valid
                         token, ok := meta["Token"]
                         if !ok || token != "valid-token" {
                                 return errors.New("invalid or missing auth token")
