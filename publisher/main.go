@@ -29,7 +29,7 @@ func main() {
                                         Body:   []byte("Hello from the Publisher!"),
                                 }
                                 if err := broker.Publish("example.topic", msg); err != nil {
-                                        log.Printf("Error publishing: %v", err)
+                                                log.Printf("Error publishing: %v", err)
                                 }
                         }
                 }
